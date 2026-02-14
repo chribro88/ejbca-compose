@@ -1,7 +1,7 @@
 networks:
-  access-bridge:
+  ejbca-frontend:
     driver: bridge
-  application-bridge:
+  ejbca-backend:
     driver: bridge
 services:
   ejbca-db:
