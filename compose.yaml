@@ -26,6 +26,8 @@ services:
       - ejbca-backend
     environment:
       - DATABASE_JDBC_URL=jdbc:mariadb://db:3306/ejbca?characterEncoding=UTF-8
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWORD=${MYSQL_PASSWORD}
       - LOG_LEVEL_APP=INFO
       - LOG_LEVEL_SERVER=INFO
       - TLS_SETUP_ENABLED=simple
