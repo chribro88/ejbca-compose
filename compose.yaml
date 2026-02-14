@@ -32,7 +32,6 @@ services:
       - LOG_LEVEL_SERVER=INFO
       - TLS_SETUP_ENABLED=simple
       - HTTPSERVER_HOSTNAME=${EJBCA_HTTPSERVER_HOSTNAME}
-      - EJBCA_HTTPS_PORT=${EJBCA_HTTPS_PORT}
     ports:
       - "8080:8080"
       - "9443:8443"
