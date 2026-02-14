@@ -31,7 +31,7 @@ services:
       - LOG_LEVEL_APP=INFO
       - LOG_LEVEL_SERVER=INFO
       - TLS_SETUP_ENABLED=simple
-      - HTTPSERVER_HOSTNAME=${EJBCA_HTTPSERVER_HOSTNAME} # TODO: need to manually update httpserver.pubhttps=8443, httpserver.privhttps=9443 and httpserver.external.privhttps=9443
+      - HTTPSERVER_HOSTNAME=${EJBCA_HTTPSERVER_HOSTNAME} # TODO: need to manually update httpserver.privhttps=8443, httpserver.pubhttps=9443 and httpserver.external.privhttps=9443
     ports:
       - "8080:8080"
       - "9443:8443"
