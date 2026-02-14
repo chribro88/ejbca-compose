@@ -6,6 +6,7 @@ networks:
 services:
   ejbca-db:
     image: "library/mariadb:latest"
+    user: ${MYSQL_UID}:${MYSQL_GID}"
     networks:
       - ejbca-backend
     environment:
