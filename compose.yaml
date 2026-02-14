@@ -32,7 +32,7 @@ services:
       - LOG_LEVEL_SERVER=INFO
       - TLS_SETUP_ENABLED=simple
       - HTTPSERVER_HOSTNAME=${EJBCA_HTTPSERVER_HOSTNAME} # TODO: need to manually update httpserver.privhttps=8443, httpserver.pubhttps=9443 and httpserver.external.privhttps=9443
-      - JAVA_OPTS=-Djavax.net.ssl.trustStore=/opt/keyfactor/secrets/external/tls/ts/truststore.jks -Djavax.net.ssl.trustStorePassword=${EJBCA_TRUSTSTORE_PASSWD}
+      - JAVA_OPTS_APPEND=-Djavax.net.ssl.trustStore=/opt/keyfactor/secrets/external/tls/ts/truststore.jks -Djavax.net.ssl.trustStorePassword=${EJBCA_TRUSTSTORE_PASSWD}
     volumes:
       - ${EJBCA_TRUSTSTORE_PATH}:/opt/keyfactor/secrets/external/tls/ts/truststore.jks
       - ${EJBCA_TRUSTSTORE_PASSWD_PATH}:/opt/keyfactor/secrets/external/tls/ts/truststore.storepasswd 
