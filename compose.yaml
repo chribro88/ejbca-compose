@@ -4,7 +4,7 @@ networks:
   ejbca-backend:
     driver: bridge
 services:
-  ejbca-db:
+  db:
     image: "library/mariadb:latest"
     user: ${MYSQL_UID}:${MYSQL_GID}"
     networks:
@@ -16,7 +16,7 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - ${EJBCA_DB_PATH}:/var/lib/mysql:rw
-  ejbca-node1:
+  node1:
     hostname: ejbca-node1
     image: keyfactor/ejbca-ce:latest
     depends_on:
