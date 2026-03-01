@@ -36,8 +36,8 @@ services:
     volumes:
       - ${EJBCA_TRUSTSTORE_PATH}:/opt/keyfactor/secrets/external/tls/ts/truststore.jks
       - ${EJBCA_TRUSTSTORE_PASSWD_PATH}:/opt/keyfactor/secrets/external/tls/ts/truststore.storepasswd 
-      - ${EJBCA_KEYSTORE_PATH}:/mnt/external/secrets/tls/ks/keystore.p12
-      - ${EJBCA_KEYSTORE_PASSWD_PATH}:/mnt/external/secrets/tls/ks/keystore.password
+      - ${EJBCA_KEYSTORE_PATH}:/mnt/external/secrets/tls/ks/server.jks
+      - ${EJBCA_KEYSTORE_PASSWD_PATH}:/mnt/external/secrets/tls/ks/server.password
     ports:
       - "8080:8080"
       - "9443:8443"
